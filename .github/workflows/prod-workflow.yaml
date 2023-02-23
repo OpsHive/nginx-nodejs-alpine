@@ -1,8 +1,5 @@
 name: Deploy to AWS - PROD for NI_BE_TASKS
 
-env:
-  DOCKERHUB_REPO: opshive/fe
-
 on:
   push:
     branches:
