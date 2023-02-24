@@ -1,8 +1,5 @@
 name: Workflow for base image of docker consisting nginx, alpine and nodejs latest.
 
-env:
-  DOCKERHUB_REPO: opshive/fe
-
 on:
   push:
     branches:
@@ -22,8 +19,8 @@ jobs:
     -   name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build & Push the Docker image
       run: |
