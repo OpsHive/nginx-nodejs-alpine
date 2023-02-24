@@ -1,4 +1,4 @@
-name: Deploy to AWS - PROD for NI_BE_TASKS
+name: Workflow for base image of docker consisting nginx, alpine and nodejs latest.
 
 env:
   DOCKERHUB_REPO: opshive/fe
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-backend:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Code Checkout
